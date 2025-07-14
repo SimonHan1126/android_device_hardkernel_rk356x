@@ -19,7 +19,8 @@ gpu_max_freq="800"
 # dmc_ondemand venc_ondemand userspace powersave performance simple_ondemand
 gpu_governor="performance"
 
-overlays="i2c0 spi0 uart0"
+# overlays="i2c0 spi0 uart0"
+overlays="i2c0 spi0 uart0 display_vu8s"
 overlays_resize=16384
 
 ###########################
