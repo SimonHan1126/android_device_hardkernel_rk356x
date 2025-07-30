@@ -145,4 +145,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     device/hardkernel/common/4g_modem/bin64/dhcpcd:vendor/bin/dhcpcd \
     device/hardkernel/common/4g_modem/lib64/libril.so:vendor/lib64/libril.so \
+    device/hardkernel/common/4g_modem/lib64/librk-ril.so:vendor/lib64/librk-ril.so \
     device/hardkernel/common/4g_modem/lib64/libreference-ril-sim7600gh.so:vendor/lib64/libreference-ril-sim7600gh.so
