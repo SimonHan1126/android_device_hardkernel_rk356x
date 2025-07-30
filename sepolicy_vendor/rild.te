@@ -1,0 +1,4 @@
+allow rild usb_serial_device:chr_file { open read write ioctl getattr };
+allow rild radio_device:chr_file { open read write ioctl getattr };
+allow rild rild_socket:sock_file { create ioctl read write getattr };
+allow rild hwservicemanager:binder { call transfer };

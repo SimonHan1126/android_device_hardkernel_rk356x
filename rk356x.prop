@@ -1,2 +1,18 @@
 ro.vendor.rk_sdk=1
 ro.sys.host_unhide_charge_notify=true
+
+rild.simcom.gps=1
+rild.simcom.ussd=1
+rild.simcom.stk=1
+rild.simcom.ndis=1
+rild.simcom.stopgps=1
+rild.simcom.gpsloglevel=1
+rild.simcom.netclose=1
+rild.simcom.clvl=4
+rild.simcom.csdvc=1
+
+ro.telephony.default_network=9,9        # example LTE/GSM (adjust regionally)
+ro.radio.noril=false
+ro.carrier=one_nz
+persist.radio.multisim.config=none      # single SIM; helps clarity
+persist.vendor.radio.data_ltd_sys_ind=1 # optional; depends on stack

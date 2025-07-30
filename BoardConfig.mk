@@ -27,7 +27,7 @@ PRODUCT_KERNEL_CONFIG += rk356x.config
 PRODUCT_BOOT_DEVICE := fe310000.sdhci
 PRODUCT_SDMMC_DEVICE := fe2b0000.dwmmc
 
-SF_PRIMARY_DISPLAY_ORIENTATION := 0
+SF_PRIMARY_DISPLAY_ORIENTATION := 90
 
 # Disable emulator for "make dist" until there is a 64-bit qemu kernel
 BUILD_EMULATOR := false

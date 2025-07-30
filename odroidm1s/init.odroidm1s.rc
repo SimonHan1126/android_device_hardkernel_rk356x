@@ -7,3 +7,16 @@ service ups /vendor/bin/check_ups.sh
     group root
     disabled
     oneshot
+
+service vendor.ril-daemon /vendor/bin/hw/rild -l /vendor/lib64/libreference-ril-sim7600gh.so
+    class main
+    user radio
+    group radio cache inet misc audio log
+    capabilities NET_ADMIN NET_RAW
+    socket rild stream 660 root radio
+    socket rild-debug stream 660 radio system
+    socket rild-ppp stream 660 root radio
+    socket rild-gps stream 660 root radio
+
+on post-fs-data
+    start vendor.ril-daemon

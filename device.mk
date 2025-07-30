@@ -71,6 +71,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
                 ro.ril.ecclist=112,911 \
                 ro.opengles.version=196610 \
                 wifi.interface=wlan0 \
+                ro.telephony.default_network=9 \
+                rild.libpath=/vendor/lib64/libreference-ril-sim7600gh.so \
+                rild.libargs=-d /dev/ttyUSB2 \
                 ro.audio.monitorOrientation=true \
                 debug.nfc.fw_download=false \
                 debug.nfc.se=false \
@@ -92,3 +95,54 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # boblight
 $(call inherit-product-if-exists, $(LOCAL_PATH)/boblight.mk)
+
+
+PRODUCT_PACKAGES += \
+    Telecom \
+    TelephonyProvider \
+    telephony-common  \
+    TeleService \
+    messaging \
+    Dialer  \
+    CarrierDefaultApp \
+    CarrierConfig \
+    rild \
+    librk-ril \
+    dhcpcd
+
+PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/apns-full-conf.xml:vendor/etc/apns-conf.xml
+
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.4 \
+    android.hardware.radio@1.4.vendor \
+    android.hardware.radio@1.4-impl \
+    android.hardware.radio@1.4-service \
+    android.hardware.radio@1.4-service-compat \
+    libradiocompat \
+    android.hardware.radio@1.0.vendor \
+    android.hardware.radio@1.1.vendor \
+    android.hardware.radio@1.2.vendor \
+    android.hardware.radio@1.3.vendor \
+    android.hardware.radio.deprecated@1.0 \
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.radio.config@1.0-service
+
+
+PRODUCT_PACKAGES += \
+    libhidltransport.vendor \
+    libhidlbase.vendor \
+    libhwbinder.vendor
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.boot.noril=false \
+    ro.telephony.default_network=9
+
+DEVICE_MANIFEST_FILE += device/hardkernel/common/4g_modem/manifest.xml
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.rild.libpath=/vendor/lib64/libreference-ril-sim7600gh.so
+
+PRODUCT_COPY_FILES += \
+    device/hardkernel/common/4g_modem/bin64/dhcpcd:vendor/bin/dhcpcd \
+    device/hardkernel/common/4g_modem/lib64/libril.so:vendor/lib64/libril.so \
+    device/hardkernel/common/4g_modem/lib64/libreference-ril-sim7600gh.so:vendor/lib64/libreference-ril-sim7600gh.so
