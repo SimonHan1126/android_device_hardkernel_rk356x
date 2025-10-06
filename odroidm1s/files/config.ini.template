@@ -20,7 +20,7 @@ gpu_max_freq="800"
 gpu_governor="performance"
 
 # overlays="i2c0 spi0 uart0"
-overlays="i2c0 spi0 uart0 display_vu8s"
+overlays="i2c0 spi0 uart0 uart1 display_vu8s"
 overlays_resize=16384
 
 user_def_args="orientation=3 prevent_sleep=true"

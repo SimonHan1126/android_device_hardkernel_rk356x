@@ -62,18 +62,18 @@ PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.extend=HDMI-A,TV
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/files/config.ini.template:$(TARGET_COPY_OUT_VENDOR)/etc/config.ini.template
 
-ifeq ($(TARGET_BUILD_VARIANT),userdebug)
-PRODUCT_PACKAGES += \
-    AndroidTerm \
-
-PRODUCT_PACKAGES += \
-    SprUsr
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/../../proprietary/bin/phh-su:$(TARGET_COPY_OUT_SYSTEM)/bin/phh-su \
-    $(LOCAL_PATH)/../../proprietary/bin/su:$(TARGET_COPY_OUT_SYSTEM)/bin/su \
-    $(LOCAL_PATH)/../../proprietary/etc/init/su.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/su.rc
-endif
+# ifeq ($(TARGET_BUILD_VARIANT),userdebug)
+# PRODUCT_PACKAGES += \
+#     AndroidTerm \
+#
+# PRODUCT_PACKAGES += \
+#     SprUsr
+#
+# PRODUCT_COPY_FILES += \
+#     $(LOCAL_PATH)/../../proprietary/bin/phh-su:$(TARGET_COPY_OUT_SYSTEM)/bin/phh-su \
+#     $(LOCAL_PATH)/../../proprietary/bin/su:$(TARGET_COPY_OUT_SYSTEM)/bin/su \
+#     $(LOCAL_PATH)/../../proprietary/etc/init/su.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/su.rc
+# endif
 
 # For UPS
 PRODUCT_COPY_FILES += \

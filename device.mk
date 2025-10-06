@@ -135,7 +135,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.boot.noril=false \
-    ro.telephony.default_network=9
+    ro.telephony.default_network=9 \
+    ro.control_privapp_permissions=log
 
 DEVICE_MANIFEST_FILE += device/hardkernel/common/4g_modem/manifest.xml
 
@@ -146,4 +147,31 @@ PRODUCT_COPY_FILES += \
     device/hardkernel/common/4g_modem/bin64/dhcpcd:vendor/bin/dhcpcd \
     device/hardkernel/common/4g_modem/lib64/libril.so:vendor/lib64/libril.so \
     device/hardkernel/common/4g_modem/lib64/librk-ril.so:vendor/lib64/librk-ril.so \
-    device/hardkernel/common/4g_modem/lib64/libreference-ril-sim7600gh.so:vendor/lib64/libreference-ril-sim7600gh.so
+    device/hardkernel/common/4g_modem/lib64/libreference-ril-sim7600gh.so:vendor/lib64/libreference-ril-sim7600gh.so \
+    device/hardkernel/common/permissions/com.tepari.macrostock.macrostock_starter.xml:system_ext/etc/permissions/com.tepari.macrostock.macrostock_starter.xml \
+    device/hardkernel/common/default_permissions/macrostock_starter_default_permissions.xml:system_ext/etc/default-permissions/macrostock_starter_default_permissions.xml \
+    device/tepari/common/sysconfig/update-ownership.xml:system_ext/etc/sysconfig/update-ownership.xml \
+    device/tepari/common/bin/macrostock_wifi_approve.sh:system_ext/bin/macrostock_wifi_approve.sh \
+    device/tepari/common/init/macrostock_wifi_approve.rc:system_ext/etc/init/macrostock_wifi_approve.rc
+
+
+
+PRODUCT_COPY_FILES += \
+    device/hardkernel/rk356x/kernelSU/ksu_preload.rc:system/etc/init/ksu_preload.rc \
+    device/hardkernel/rk356x/kernelSU/ksu_preload.sh:system/etc/ksu_preload.sh \
+    device/hardkernel/rk356x/kernelSU/ksu_allowlist.bin:system/etc/ksu_allowlist.bin
+
+# PRODUCT_COPY_FILES += \
+#     device/hardkernel/common/logcat-persist/prune_logs.sh:/system/etc/prune_logs.sh \
+#     device/hardkernel/common/logcat-persist/prune_loop.sh:/system/etc/prune_loop.sh
+
+
+PRODUCT_PACKAGES += \
+    Macrostock \
+    MacrostockStarter
+
+PRODUCT_VENDOR_PROPERTIES += \
+    wifi.module.path=/vendor/lib/modules/8821cu.ko \
+    wifi.driver.module_path=/vendor/lib/modules/8821cu.ko \
+    wifi.driver.module_name=8821cu \
+    vendor.wifi.driver.module_path=/vendor/lib/modules/8821cu.ko

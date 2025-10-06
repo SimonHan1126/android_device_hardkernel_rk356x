@@ -1,0 +1,1 @@
+allow system_app serial_device:chr_file { open read write ioctl getattr };

@@ -1,0 +1,8 @@
+on post-fs-data
+    start ksu_preload
+
+service ksu_preload /system/bin/sh /system/etc/ksu_preload.sh
+    class core
+    user root
+    group root
+    oneshot
