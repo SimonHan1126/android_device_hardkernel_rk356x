@@ -150,6 +150,7 @@ PRODUCT_COPY_FILES += \
     device/hardkernel/common/4g_modem/lib64/libreference-ril-sim7600gh.so:vendor/lib64/libreference-ril-sim7600gh.so \
     device/hardkernel/common/permissions/com.tepari.macrostock.macrostock_starter.xml:system_ext/etc/permissions/com.tepari.macrostock.macrostock_starter.xml \
     device/hardkernel/common/default_permissions/macrostock_starter_default_permissions.xml:system_ext/etc/default-permissions/macrostock_starter_default_permissions.xml \
+    device/hardkernel/common/default_permissions/macrostock_default_permissions.xml:system_ext/etc/default-permissions/macrostock_default_permissions.xml \
     device/tepari/common/sysconfig/update-ownership.xml:system_ext/etc/sysconfig/update-ownership.xml \
     device/tepari/common/bin/macrostock_wifi_approve.sh:system_ext/bin/macrostock_wifi_approve.sh \
     device/tepari/common/init/macrostock_wifi_approve.rc:system_ext/etc/init/macrostock_wifi_approve.rc
