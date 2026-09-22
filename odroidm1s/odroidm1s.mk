@@ -84,5 +84,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.official=https://dn.odroid.com/RK3566/ODROID-M1S/Android/13/ \
     ro.url.mirror=https://www.odroid.in/mirror/dn.odroid.com/RK3566/ODROID-M1S/Android/13/
 
-PRODUCT_COPY_FILES += \
-    device/hardkernel/rk356x/odroidm1s/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+#PRODUCT_COPY_FILES += \
+#    device/hardkernel/rk356x/odroidm1s/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
