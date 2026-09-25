@@ -169,6 +169,7 @@ PRODUCT_COPY_FILES += \
 
 
 PRODUCT_PACKAGES += \
+    TeamViewerHost \
     Macrostock \
     MacrostockStarter
 
